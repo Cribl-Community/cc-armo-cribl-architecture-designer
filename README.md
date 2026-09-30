@@ -42,7 +42,7 @@ ArMo - Cribl Architecture Designer is a Cribl App for pre-sales engineers, partn
 3. Review the app details and complete installation.
 
 ### If The App Is Not Yet In The Cribl Marketplace
-1. Download the `.tgz` app package: [`build/cribl-architecture-designer-1.0.2.tgz`](build/cribl-architecture-designer-1.0.2.tgz) in this repository.
+1. Download the `.tgz` app package: [`tgz/cribl-architecture-designer-1.0.2.tgz`](tgz/cribl-architecture-designer-1.0.2.tgz) in this repository.
 2. In Cribl, go to Apps and choose import from file.
 3. Upload the `.tgz` file and complete installation.
 
@@ -103,9 +103,19 @@ Built for the Cribl App Hackathon by Arno Arzumanyan. Contact the maintainer via
 
 [`media/ArMo-prototype-v3.mp4`](media/ArMo-prototype-v3.mp4) — work-in-progress Cribl Conference 2026 Hackathon film (opening through DESIGN, 53 s).
 
+## Repository Layout
+
+| Path | Contents |
+|---|---|
+| [`source/`](source) | Cribl App source code |
+| [`tgz/`](tgz) | Installable app package |
+| [`media/`](media) | Intro video |
+| [`LICENSE`](LICENSE) | Apache License 2.0 |
+
 ## Development
 
 ```bash
+cd source
 npm install
 npm run dev
 npm run package
