@@ -1,0 +1,250 @@
+/* "Import from this workspace" modal. All colors via design tokens (light + dark). */
+
+.imp {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.lg');
+  min-height: 240px;
+}
+
+.imp-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: token('spacing.sm');
+}
+
+/* ── Blocks (Sources / Destinations) ───────────────────────── */
+.imp-block {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.sm');
+}
+
+.imp-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: token('spacing.md');
+  flex-wrap: wrap;
+}
+
+.imp-block__title {
+  display: flex;
+  align-items: center;
+  gap: token('spacing.sm');
+  color: token('color.foreground.default');
+}
+
+.imp-volume {
+  display: flex;
+  align-items: flex-end;
+  gap: token('spacing.sm');
+}
+
+.imp-volume__field {
+  width: 260px;
+}
+
+/* ── Tables ────────────────────────────────────────────────── */
+.imp-table-wrap {
+  border: 1px solid token('color.border.neutral.subtle');
+  border-radius: token('radius.md');
+  overflow-x: auto;
+}
+
+.imp-table th {
+  background: token('color.background.neutral.subtle');
+  white-space: nowrap;
+}
+
+.imp-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.imp-table--compact td {
+  padding-top: token('spacing.xs');
+  padding-bottom: token('spacing.xs');
+}
+
+.imp-check {
+  width: 44px;
+}
+
+.imp-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.imp-table th.imp-num {
+  text-align: right;
+}
+
+.imp-col-count {
+  width: 120px;
+}
+
+.imp-col-volume {
+  width: 140px;
+}
+
+.imp-row--off td {
+  color: token('color.foreground.subtle');
+}
+
+.imp-row--off .imp-logo {
+  opacity: 0.45;
+}
+
+.imp-type {
+  display: flex;
+  align-items: center;
+  gap: token('spacing.sm');
+  min-width: 230px;
+}
+
+.imp-type__select {
+  flex: 1;
+  min-width: 0;
+}
+
+.imp-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: token('radius.md');
+  background: token('color.background.neutral.subtle');
+  border: 1px solid token('color.border.neutral.subtle');
+  flex-shrink: 0;
+}
+
+.imp-cell-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.imp-id {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: token('spacing.xs');
+  font-size: 13px;
+}
+
+.imp-sub {
+  color: token('color.foreground.subtle');
+  font-size: 12px;
+}
+
+.imp-group-name {
+  display: inline-flex;
+  align-items: center;
+  gap: token('spacing.xs');
+}
+
+.imp-groups {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: token('spacing.xs');
+}
+
+.imp-empty {
+  padding: token('spacing.lg');
+  border: 1px dashed token('color.border.neutral.default');
+  border-radius: token('radius.md');
+  text-align: center;
+}
+
+.imp-routes {
+  display: flex;
+  align-items: center;
+  gap: token('spacing.xs');
+  padding: token('spacing.md') token('spacing.lg');
+  border-radius: token('radius.md');
+  background: token('color.background.accent.subtle');
+  border: 1px solid token('color.border.accent.subtle');
+}
+
+/* ── Errors ────────────────────────────────────────────────── */
+.imp-errors {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.sm');
+}
+
+.imp-errors li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.imp-errors__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: token('spacing.xs');
+  font-size: 12px;
+  color: token('color.foreground.subtle');
+  word-break: break-all;
+}
+
+/* ── Loading ───────────────────────────────────────────────── */
+.imp-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: token('spacing.sm');
+  min-height: 300px;
+  text-align: center;
+}
+
+.imp-progress {
+  width: min(360px, 80%);
+  height: 4px;
+  margin-top: token('spacing.sm');
+  border-radius: token('radius.full');
+  background: token('color.background.neutral.default');
+  overflow: hidden;
+}
+
+.imp-progress__bar {
+  height: 100%;
+  border-radius: inherit;
+  background: token('color.background.brand.solid.default');
+  transition: width 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imp-progress__bar {
+    transition: none;
+  }
+}
+
+/* ── Done ──────────────────────────────────────────────────── */
+.imp-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: token('spacing.sm');
+  padding: token('spacing.xl') token('spacing.lg');
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.imp-done__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: token('color.background.success.subtle');
+  color: token('color.foreground.success.default');
+}

@@ -1,0 +1,50 @@
+{
+  "name": "cribl-architecture-designer",
+  "private": true,
+  "version": "1.0.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && apps build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "package": "apps package"
+  },
+  "dependencies": {
+    "@capra/core": "^1.16.0",
+    "@capra/dx-tokens-postcss-plugin": "^0.4.0",
+    "@capra/icons": "^1.10.1",
+    "@capra/theme": "^1.6.0",
+    "@xyflow/react": "^12.12.0",
+    "jspdf": "^2.5.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@cribl/apps": "1.2.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "displayName": "ArMo - Cribl Architecture Designer",
+  "description": "Design, size, and plan Cribl deployments from inside Cribl, grounded in Cribl sizing guidance and your live workspace.",
+  "author": "Arno Arzumanyan",
+  "license": "Apache-2.0",
+  "cribl": {
+    "type": "app",
+    "createAppScriptVersion": "1.2.0"
+  },
+  "tags": {
+    "product": [
+      "stream",
+      "edge",
+      "lake",
+      "search"
+    ]
+  }
+}

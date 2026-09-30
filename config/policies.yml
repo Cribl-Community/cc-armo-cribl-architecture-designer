@@ -1,0 +1,14 @@
+# Read-only Cribl API paths used by "Import from this workspace".
+policies:
+  - object: '/master/groups'
+    actions: ['GET']
+  - object: '/master/groups/*'
+    actions: ['GET']
+  - object: '/master/workers'
+    actions: ['GET']
+  - object: '/system/licenses/usage'
+    actions: ['GET']
+  - object: '/m/:gid/system/inputs'
+    actions: ['GET']
+  - object: '/m/:gid/system/outputs'
+    actions: ['GET']
