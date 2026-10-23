@@ -134,7 +134,7 @@ Licensed under the [Apache License, Version 2.0](LICENSE).
 | App Name | ArMo - Cribl Architecture Designer |
 | App ID | cribl-architecture-designer |
 | Version | 1.0.2 |
-| Author | Arno Arzumanyan |
+| Author | Arno Arzumanyan & Moïse Aubert |
 | Support Model | community-built |
 | Support Label | Community Built |
 | Support Contact | App repository |
