@@ -85,7 +85,7 @@ The app makes no external calls. `proxies.yml` declares no domains.
 ## Data And Storage
 
 * Designs are stored in the app's KV store under `designs/{userId}/…` (one key per design plus an index).
-* Designs are per user and per Workspace.
+* Designs are per user and per workspace.
 * Deleting the app deletes its KV data.
 
 ## Support
